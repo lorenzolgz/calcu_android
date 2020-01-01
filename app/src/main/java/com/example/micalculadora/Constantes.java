@@ -13,6 +13,9 @@ public class Constantes {
     public static final String OPERATOR_SUM = "+";
     public static final String OPERATOR_NULL = "null";
     public static final String POINT = ".";
+    public static final String OPERATOR_SP= "S";
+    public static final String OPERATOR_RP = "R";
+
 
     static final int DRAWABLE_RIGHT = 2;
 }

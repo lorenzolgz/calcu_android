@@ -118,7 +118,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    @OnClick({R.id.btn_clear, R.id.btn_div, R.id.btn_mult, R.id.btn_sub, R.id.btn_add, R.id.btn_equal})
+    @OnClick({R.id.btn_clear, R.id.btn_div, R.id.btn_mult, R.id.btn_sub, R.id.btn_add, R.id.btn_equal, R.id.btn_sum_perc, R.id.btn_res_perc})
     public void onClickedControl(View view) {
         switch (view.getId()) {
 
@@ -130,6 +130,8 @@ public class MainActivity extends AppCompatActivity {
             case R.id.btn_mult:
             case R.id.btn_sub:
             case R.id.btn_add:
+            case R.id.btn_sum_perc:
+            case R.id.btn_res_perc:
 
                 resolve(false);
 
@@ -138,7 +140,6 @@ public class MainActivity extends AppCompatActivity {
                 final String ultimo_digito = operacion.substring(operacion.length()-1);
 
                 if(operador.equals(Constantes.OPERATOR_SUB)){
-
                     if(operacion.isEmpty() || (!(ultimo_digito.equals(Constantes.OPERATOR_SUB)) && (!(ultimo_digito.equals(Constantes.POINT)))))
                         editTextInput.getText().append(operador);
                 }
@@ -147,6 +148,7 @@ public class MainActivity extends AppCompatActivity {
                     editTextInput.getText().append(operador);
 
                 break;
+
             case R.id.btn_equal:
                 resolve(true);
                 break;

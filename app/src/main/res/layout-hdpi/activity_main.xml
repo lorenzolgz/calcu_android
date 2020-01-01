@@ -113,7 +113,7 @@
     <!---->
 
     <RelativeLayout
-
+        android:id="@+id/relayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/tilayout"
@@ -220,5 +220,79 @@
             android:id="@+id/btn_equal"
             android:theme="@style/ButtonOp"></Button>
     </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relayout"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="@dimen/alto_boton"
+            android:text="Sumar Porcentaje"
+            android:gravity="center"
+            android:textColor="#FFFF"
+            android:background="#000000">
+
+        </TextView>
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_weight="0.05"
+            android:layout_height="match_parent"></Space>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="@dimen/alto_boton"
+            android:text="Restar Porcentaje"
+            android:gravity="center"
+            android:textColor="#FFFF"
+            android:background="#000000">
+
+        </TextView>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relayout"
+        android:orientation="horizontal"
+        >
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="@dimen/alto_boton"
+            android:text="@string/calc_sim_sum_perc"
+            android:id="@+id/btn_sum_perc"
+            android:textColor="@android:color/transparent"
+            android:background="@android:color/transparent"></Button>
+
+
+        <Space
+            android:layout_width="@dimen/ancho_boton"
+            android:layout_weight="0.05"
+            android:layout_height="match_parent"></Space>
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="@dimen/alto_boton"
+            android:text="@string/calc_sim_rest_perc"
+            android:id="@+id/btn_res_perc"
+            android:theme="@style/ButtonOp"
+            android:textColor="@android:color/transparent"
+            android:background="@android:color/transparent"></Button>
+
+    </LinearLayout>
+
+
 
 </RelativeLayout>

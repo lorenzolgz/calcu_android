@@ -19,4 +19,6 @@
     <string name="calc_sim_add">+</string>
     <string name="calc_sim_equal">=</string>
     <string name="message_exp_incorrect">Operacion no válida</string>
+    <string name="calc_sim_sum_perc">S</string>
+    <string name="calc_sim_rest_perc">R</string>
 </resources>

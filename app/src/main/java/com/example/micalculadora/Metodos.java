@@ -1,5 +1,6 @@
 package com.example.micalculadora;
 
+import android.provider.ContactsContract;
 import android.widget.EditText;
 
 import java.util.Locale;
@@ -11,9 +12,12 @@ import java.util.Locale;
 
 public class Metodos {
     public static String getOperator(String operation) {
-        String operator = operation.contains(Constantes.OPERATOR_MULTI) ? Constantes.OPERATOR_MULTI :
-                operation.contains(Constantes.OPERATOR_BETWEN) ? Constantes.OPERATOR_BETWEN :
-                        operation.contains(Constantes.OPERATOR_SUM) ? "\\" + Constantes.OPERATOR_SUM : Constantes.OPERATOR_NULL;
+        String operator =   operation.contains(Constantes.OPERATOR_MULTI) ? Constantes.OPERATOR_MULTI :
+                            operation.contains(Constantes.OPERATOR_BETWEN) ? Constantes.OPERATOR_BETWEN :
+                            operation.contains(Constantes.OPERATOR_SUM) ? "\\" + Constantes.OPERATOR_SUM :
+                            operation.contains(Constantes.OPERATOR_SP) ? Constantes.OPERATOR_SP :
+                            operation.contains(Constantes.OPERATOR_RP) ? Constantes.OPERATOR_RP:
+                            Constantes.OPERATOR_NULL;
 
         if (operator.equals(Constantes.OPERATOR_NULL) && operation.lastIndexOf(Constantes.OPERATOR_SUB) > 0) {
             operator = Constantes.OPERATOR_SUB;
@@ -86,6 +90,12 @@ public class Metodos {
             case Constantes.OPERATOR_SUB:
                 result = numberOne - numberTwo;
                 break;
+            case Constantes.OPERATOR_SP:
+                result = numberOne * (1+(numberTwo/100));
+                break;
+            case Constantes.OPERATOR_RP:
+                result = numberOne * (1-(numberTwo/100));
+                break;
         }
 
         return result;
@@ -100,10 +110,14 @@ public class Metodos {
 
         return (ultimoCaracter.equals(Constantes.OPERATOR_MULTI) ||
                 ultimoCaracter.equals(Constantes.OPERATOR_BETWEN) ||
-                ultimoCaracter.equals(Constantes.OPERATOR_SUM)) &&
+                ultimoCaracter.equals(Constantes.OPERATOR_SUM) ||
+                ultimoCaracter.equals(Constantes.OPERATOR_SP) ||
+                ultimoCaracter.equals(Constantes.OPERATOR_RP)) &&
                 (String.valueOf(s.charAt(s.length() - 2)).equals(Constantes.OPERATOR_MULTI) ||
                 penultimoCaracter.equals(Constantes.OPERATOR_BETWEN) ||
                 penultimoCaracter.equals(Constantes.OPERATOR_SUM) ||
-                penultimoCaracter.equals(Constantes.OPERATOR_SUB));
+                penultimoCaracter.equals(Constantes.OPERATOR_SUB) ||
+                penultimoCaracter.equals(Constantes.OPERATOR_SP) ||
+                penultimoCaracter.equals(Constantes.OPERATOR_RP));
     }
 }
