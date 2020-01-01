@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Mi Calculadora</string>
+    <string name="calc_input">\Introduce la operacion\</string>
+    <string name="calc_num_7">7</string>
+    <string name="calc_sim_point">.</string>
+    <string name="calc_num_1">1</string>
+    <string name="calc_num_4">4</string>
+    <string name="calc_num_8">8</string>
+    <string name="calc_num_5">5</string>
+    <string name="calc_num_2">2</string>
+    <string name="calc_num_0">0</string>
+    <string name="calc_sim_clear">c</string>
+    <string name="calc_num_9">9</string>
+    <string name="calc_num_6">6</string>
+    <string name="calc_num_3">3</string>
+    <string name="calc_sim_divide">÷</string>
+    <string name="calc_sim_multiply">x</string>
+    <string name="calc_sim_substract">-</string>
+    <string name="calc_sim_add">+</string>
+    <string name="calc_sim_equal">=</string>
+    <string name="message_exp_incorrect">Operacion no válida</string>
+</resources>

@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainlayout"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:paddingLeft="@dimen/dim_margen"
+    android:paddingRight="@dimen/dim_margen"
+    >
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tilayout">
+
+        <EditText
+            android:id="@+id/editText_input"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dim_alto_visor_hor"
+            android:hint="@string/calc_input"
+            android:gravity="center_vertical"
+            android:inputType="none"
+            android:textIsSelectable="true"
+            android:maxLength="16"
+            android:drawableEnd="@drawable/ic_backspace_black_36dp"
+            android:drawablePadding="16dp">
+        </EditText>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <LinearLayout
+        android:layout_width="@dimen/ancho_boton"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/tilayout"
+        android:id="@+id/lilayout0">
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/alto_boton"
+            android:id="@+id/btn_7"
+            android:text="@string/calc_num_7"
+            android:theme="@style/ButtonMD"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/alto_boton"
+            android:id="@+id/btn_4"
+            android:text="@string/calc_num_4"
+            android:theme="@style/ButtonMD"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/alto_boton"
+            android:id="@+id/btn_1"
+            android:text="@string/calc_num_1"
+            android:theme="@style/ButtonMD"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="@dimen/ancho_boton"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/tilayout"
+        android:layout_toEndOf="@id/lilayout0"
+        android:id="@+id/lilayout1">
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/alto_boton"
+            android:id="@+id/btn_8"
+            android:text="@string/calc_num_8"
+            android:theme="@style/ButtonMD"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/alto_boton"
+            android:id="@+id/btn_5"
+            android:text="@string/calc_num_5"
+            android:theme="@style/ButtonMD"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/alto_boton"
+            android:id="@+id/btn_2"
+            android:text="@string/calc_num_2"
+            android:theme="@style/ButtonMD"/>
+
+
+    </LinearLayout>
+
+    <!---->
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tilayout"
+        android:layout_toEndOf="@id/lilayout1">
+
+        <LinearLayout
+            android:layout_width="@dimen/ancho_boton"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/lilayout2">
+
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/alto_boton"
+                android:id="@+id/btn_9"
+                android:text="@string/calc_num_9"
+                android:theme="@style/ButtonMD"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/alto_boton"
+                android:id="@+id/btn_6"
+                android:text="@string/calc_num_6"
+                android:theme="@style/ButtonMD"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_clear"
+            android:layout_toEndOf="@id/lilayout2"
+            android:id="@+id/lilayout3"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="@dimen/alto_boton"
+                android:layout_toEndOf="@id/lilayout2"
+                android:text="@string/calc_sim_clear"
+                android:id="@+id/btn_clear"
+                android:theme="@style/ButtonIrreversible"></Button>
+
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="@dimen/alto_boton"
+                android:id="@+id/btn_div"
+                android:text="@string/calc_sim_divide"
+                android:theme="@style/ButtonOp"/>
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="@dimen/alto_boton"
+                android:id="@+id/btn_mult"
+                android:text="@string/calc_sim_multiply"
+                android:theme="@style/ButtonOp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lilayout3"
+            android:layout_toEndOf="@id/lilayout2"
+            android:id="@+id/lilayout4"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="@dimen/alto_boton"
+                android:id="@+id/btn_point"
+                android:text="@string/calc_sim_point"
+                android:theme="@style/ButtonMD"/>
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="@dimen/alto_boton"
+                android:id="@+id/btn_sub"
+                android:text="@string/calc_sim_substract"
+                android:theme="@style/ButtonOp"/>
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="@dimen/alto_boton"
+                android:id="@+id/btn_add"
+                android:text="@string/calc_sim_add"
+                android:theme="@style/ButtonOp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lilayout4">
+
+            <Button
+                android:layout_width="@dimen/ancho_boton"
+                android:layout_height="@dimen/alto_boton"
+                android:id="@+id/btn_3"
+                android:text="@string/calc_num_3"
+                android:theme="@style/ButtonMD"/>
+
+            <Button
+                android:layout_width="@dimen/ancho_boton"
+                android:layout_height="@dimen/alto_boton"
+                android:id="@+id/btn_0"
+                android:text="@string/calc_num_0"
+                android:theme="@style/ButtonMD"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/alto_boton"
+                android:layout_below="@id/lilayout4"
+                android:text="@string/calc_sim_equal"
+                android:id="@+id/btn_equal"
+                android:theme="@style/ButtonOp"></Button>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>
